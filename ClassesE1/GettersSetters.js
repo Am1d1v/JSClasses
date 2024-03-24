@@ -36,7 +36,17 @@ class Task{
         return this.dueDate < new Date();
     }
 
+    set dueDate(date){
+
+        if(date < new Date()) {
+            return 
+        }
+        this._dueDate = date
+    }
+
 }   
 
-const newTask = new Task('Task2', new Date('2024/01/01'))
+const newTask = new Task('Task2', new Date('2025/01/01'));
+console.log(newTask);
+
 
